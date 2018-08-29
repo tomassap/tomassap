@@ -1,29 +1,42 @@
-const express = require('express');
+const express = require("express");
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const appointments = require('./routes/api/appointments');
-const featuredImages = require('./routes/api/featuredImages');
-const posts = require('./routes/api/posts');
+const bodyParser = require("body-parser");
+const passport = require("passport");
 
+const appointments = require("./routes/api/appointments");
+const featuredImages = require("./routes/api/featuredImages");
+const posts = require("./routes/api/posts");
+const profiles = require("./routes/api/profile");
+const users = require("./routes/api/users");
 
 const app = express();
 
+// body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 // DB config
-const db = require('./config/keys').mongoURI;
+const db = require("./config/keys").mongoURI;
 
 // Connect to mongoDB
 mongoose
   .connect(db)
-  .then(() => console.log('MongoDB Connected'))
+  .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
-app.get("/", (req, res) => res.send('Hey'));
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport Config
+require("./config/passport")(passport);
 
 // use routes
-app.use('/api/appointments', appointments);
-app.use('/api/featureImages', featuredImages);
-app.use('/api/posts', posts);
+app.use("/api/appointments", appointments);
+app.use("/api/featureImages", featuredImages);
+app.use("/api/posts", posts);
+app.use("/api/users", users);
+app.use("/api/profile", profiles);
 
 const port = process.env.port || 5000;
 
