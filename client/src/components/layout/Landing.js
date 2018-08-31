@@ -17,15 +17,16 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Developer Connector</h1>
+                <h1 className="display-3 mb-4">// Andrew Tomassone</h1>
                 <p className="lead">
-                  {" "}
-                  Create a developer profile/portfolio, share posts and get help
-                  from other developers
+                  I do software development & design, photography/videogrpahy,
+                  music composition, graphic design, & much more. Whatever you
+                  need, I've got it covered; Tell me about your project & find
+                  out how I can help you realize the vision in your head!
                 </p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-info mr-2">
-                  Sign Up
+                  Create an Account
                 </Link>
                 <Link to="/login" className="btn btn-lg btn-light">
                   Login

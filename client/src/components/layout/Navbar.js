@@ -38,7 +38,7 @@ class Navbar extends Component {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link className="nav-link" to="/register">
-            Sign Up
+            Create an Account
           </Link>
         </li>
         <li className="nav-item">
@@ -67,9 +67,9 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/profiles">
+                <Link className="nav-link" to="/contact">
                   {" "}
-                  Developers
+                  Contact Me!
                 </Link>
               </li>
             </ul>
