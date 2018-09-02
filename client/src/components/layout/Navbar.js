@@ -16,7 +16,7 @@ class Navbar extends Component {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <a
-            href="#"
+            href=""
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
           >
@@ -68,7 +68,6 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">
-                  {" "}
                   Contact Me!
                 </Link>
               </li>
