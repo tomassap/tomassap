@@ -1,4 +1,6 @@
 const express = require("express");
+const nodemailer = require("nodemailer");
+const path = require("path");
 
 const mongoose = require("mongoose");
 
@@ -10,12 +12,14 @@ const featuredImages = require("./routes/api/featuredImages");
 const posts = require("./routes/api/posts");
 const profiles = require("./routes/api/profile");
 const users = require("./routes/api/users");
+const emails = require("./routes/api/emails");
 
 const app = express();
 
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 // DB config
 const db = require("./config/keys").mongoURI;
 
@@ -37,6 +41,7 @@ app.use("/api/featureImages", featuredImages);
 app.use("/api/posts", posts);
 app.use("/api/users", users);
 app.use("/api/profile", profiles);
+app.use("/api/emails", emails);
 
 const port = process.env.port || 5000;
 

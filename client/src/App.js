@@ -11,7 +11,7 @@ import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
-import Contact from "/components/layout/Contact";
+import Contact from "./components/layout/Contact";
 
 import "./App.css";
 
