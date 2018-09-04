@@ -21,7 +21,7 @@ router.post("/send", (req, res) => {
   const newEmail = new Email({
     name: req.body.name,
     email: req.body.email,
-    subject: req.body.Subject,
+    subject: req.body.subject,
     body: req.body.body
   });
 

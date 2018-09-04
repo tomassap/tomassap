@@ -58,11 +58,11 @@ class Contact extends Component {
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
-                    type="name"
+                    type="text"
                     className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.name
                     })}
-                    placeholder="Full Name"
+                    placeholder="Name"
                     name="name"
                     value={this.state.name}
                     onChange={this.onChange}
@@ -77,7 +77,7 @@ class Contact extends Component {
                     className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.email
                     })}
-                    placeholder="Email"
+                    placeholder="Email Address"
                     name="email"
                     value={this.state.email}
                     onChange={this.onChange}
@@ -108,7 +108,7 @@ class Contact extends Component {
                       "is-invalid": errors.body
                     })}
                     placeholder="Message"
-                    name="subject"
+                    name="body"
                     value={this.state.body}
                     onChange={this.onChange}
                   />

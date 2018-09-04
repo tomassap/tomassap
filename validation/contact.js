@@ -6,7 +6,7 @@ module.exports = function validateContactInput(data) {
 
   data.name = !isEmpty(data.name) ? data.name : "";
   data.email = !isEmpty(data.email) ? data.email : "";
-  data.subject = !isEmpty(data.body) ? data.body : "";
+  data.subject = !isEmpty(data.subject) ? data.subject : "";
   data.body = !isEmpty(data.body) ? data.body : "";
 
   if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
