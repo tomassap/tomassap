@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { sendEmail } from "../../actions/authActions";
 import TextFieldGroup from "../common/TextFieldGroup";
+import SelectListGroup from "../common/SelectListGroup";
+import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 
 class Contact extends Component {
   constructor() {
@@ -48,6 +49,26 @@ class Contact extends Component {
   render() {
     const { errors } = this.state;
 
+    // select options for Subject
+    const options = [
+      { label: "* Which service are you inquiring about?", value: 0 },
+      {
+        label: "Software Development/Design",
+        value: "Software Development/Design"
+      },
+      { label: "Photography/Videography", value: "Photography/Videography" },
+      {
+        label: "Music Composition/Production",
+        value: "Music Composition/Production"
+      },
+      { label: "Creative/Art Direction", value: "Creative/Art Direction" },
+      {
+        label: "Graphic Design/Motion Design",
+        value: "Graphic Design/Motion Design"
+      },
+      { label: "Other", value: "Other" }
+    ];
+
     return (
       <div className="contact">
         <div className="container">
@@ -71,15 +92,17 @@ class Contact extends Component {
                   onChange={this.onChange}
                   error={errors.email}
                 />
-                <TextFieldGroup
+                <SelectListGroup
                   placeholder="Subject"
                   name="subject"
                   type="text"
                   value={this.state.subject}
                   onChange={this.onChange}
+                  options={options}
                   error={errors.subject}
+                  info="Select the service that best matches what you're inquiring about"
                 />
-                <TextFieldGroup
+                <TextAreaFieldGroup
                   placeholder="Message"
                   name="body"
                   type="text"
