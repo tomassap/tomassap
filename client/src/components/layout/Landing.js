@@ -17,7 +17,7 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 class="display-3 mb-4">Tomassap Services</h1>
+                <h1 className="display-3 mb-4">Tomassap Services</h1>
                 <p className="lead">
                   I do software development & design, photography/videogrpahy,
                   music composition, graphic design, & much more. Whatever you
