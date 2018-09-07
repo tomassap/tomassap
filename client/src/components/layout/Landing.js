@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
+import logo from "../../img/tomassaplogo.png";
 
 class Landing extends Component {
   componentDidMount() {
@@ -17,7 +18,7 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Andrew Tomassone</h1>
+                <img src={logo} alt="tomassap Logo" />
                 <p className="lead">
                   I do software development & design, photography/videogrpahy,
                   music composition, graphic design, & much more. Whatever you

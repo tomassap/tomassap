@@ -129,7 +129,7 @@ router.post(
     if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
     if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
     if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
-    if (req.body.linkedIn) profileFields.social.linkedIn = req.body.linkedIn;
+    if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
     if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
 
     Profile.findOne({ user: req.user.id }).then(profile => {
@@ -260,7 +260,7 @@ router.delete(
         //Get remove index
         const removeIndex = profile.education
           .map(item => item.id)
-          .indexOf(req.params.exp_id);
+          .indexOf(req.params.edu_id);
 
         // Splice out of array
         profile.education.splice(removeIndex, 1);
