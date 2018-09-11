@@ -25,13 +25,13 @@ body {
 
 .left,
 .right {
-  width: 25%;
+  width: 5%;
   font-size: 500%;
 }
 
 .middle {
   position: relative;
-  width: 50%;
+  width: 90%;
 }
 
 .coffee {
