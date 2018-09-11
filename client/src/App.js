@@ -55,7 +55,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar />
+            <Route
+              path="/"
+              render={props => props.location.pathname !== "/" && <Navbar />}
+            />
             <Route exact path="/" component={Landing} />
             <div className="container">
               <Route exact path="/register" component={Register} />

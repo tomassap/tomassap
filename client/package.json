@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "anime": "^0.1.2",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.2",
     "react": "^16.4.2",
+    "react-anime": "^2.1.0",
     "react-dom": "^16.4.2",
     "react-moment": "^0.7.9",
     "react-redux": "^5.0.7",
