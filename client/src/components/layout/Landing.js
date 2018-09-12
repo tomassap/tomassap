@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
 import logo from "../../img/tomassaplogo-01.png";
+import HoverCup from "../common/HoverCup";
 
 class Landing extends Component {
   render() {
@@ -21,23 +22,7 @@ class Landing extends Component {
                         <i className="fas fa-angle-double-left" />
                       </div>
                     </Link>
-                    <Link to="/contact">
-                      <Anime
-                        easing="easeOutElastic"
-                        opacity={[0, 1]}
-                        duration={3000}
-                        direction="alternate"
-                        loop={false}
-                        delay={1000}
-                        rotate="3turn"
-                        scale={[0.75, 0.9]}
-                      >
-                        <div
-                          id="cssSelector"
-                          className="coffee column middle"
-                        />
-                      </Anime>
-                    </Link>
+                    <HoverCup />
                     <Link to="/about">
                       <div className="column right">
                         <i className="fas fa-angle-double-right" />

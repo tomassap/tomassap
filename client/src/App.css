@@ -25,13 +25,12 @@ body {
 
 .left,
 .right {
-  width: 5%;
+  width: 25%;
   font-size: 500%;
 }
 
 .middle {
-  position: relative;
-  width: 90%;
+  width: 50%;
 }
 
 .coffee {
@@ -39,6 +38,15 @@ body {
   background-position: center;
   height: 64vh;
   margin-top: -100px;
+}
+
+@media only screen and (max-width: 760px) {
+  .coffee {
+    background: url("./img/coffee-small.png") no-repeat;
+    background-position: center;
+    height: 64vh;
+    margin-top: -150px;
+  }
 }
 
 .card-form {
