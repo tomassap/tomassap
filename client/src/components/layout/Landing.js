@@ -35,20 +35,23 @@ class Landing extends Component {
                   opacity={[0, 1]}
                   delay={(el, index) => index * 1000}
                 >
-                  <p className="lead">
-                    I do software development & design, photography/videography,
-                    music composition, graphic design, & much more. Whatever you
-                    need, Ive got it covered; Tell me about your project & find
-                    out how I can help you realize the vision in your head!
-                  </p>
-                  <hr />
-                  <div className="div">
-                    <Link to="/register" className="btn btn-lg btn-info mr-2">
-                      Create an Account
-                    </Link>
-                    <Link to="/login" className="btn btn-lg btn-light">
-                      Login
-                    </Link>
+                  <div className="intro">
+                    <p className="lead">
+                      We do software development & design,
+                      photography/videography, music composition, graphic
+                      design/motion design, & much more. Whatever you need,
+                      we've got it covered; Tell us about your project & find
+                      out how we can help you realize the vision in your head!
+                    </p>
+                    <hr />
+                    <div className="div">
+                      <Link to="/register" className="btn btn-lg btn-info mr-2">
+                        Create an Account
+                      </Link>
+                      <Link to="/login" className="btn btn-lg btn-light">
+                        Login
+                      </Link>
+                    </div>
                   </div>
                 </Anime>
               </Anime>
