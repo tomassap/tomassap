@@ -1,18 +1,30 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 64px;
+  width: 100%;
+  overflow: hidden;
+}
+
 img {
   width: 100%;
 }
 
 body {
   font-family: "Oswald", sans-serif;
-}
-
-.container {
-  position: relative;
-  width: 100%;
+  margin: 0 0 64px;
+  /* bottom margin = footer height */
+  padding-bottom: 25px;
 }
 
 .logo {
-  opacity: 0;
+  opacity: 1;
 }
 
 .landing-inner {
@@ -38,6 +50,11 @@ body {
   background-position: center;
   height: 64vh;
   margin-top: -100px;
+}
+
+.intro {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 @media only screen and (max-width: 760px) {

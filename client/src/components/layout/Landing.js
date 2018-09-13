@@ -11,51 +11,40 @@ class Landing extends Component {
     return (
       <div className="landing">
         <div className="container">
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <Anime duration={3000} opacity={[0, 1]} translateY={"1em"}>
-                <img className="logo" src={logo} />
-                <div className="row">
-                  <div className="container">
-                    <Link to="/about">
-                      <div className="column left">
-                        <i className="fas fa-angle-double-left" />
-                      </div>
-                    </Link>
-                    <HoverCup />
-                    <Link to="/about">
-                      <div className="column right">
-                        <i className="fas fa-angle-double-right" />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                <Anime
-                  duration={3000}
-                  opacity={[0, 1]}
-                  delay={(el, index) => index * 1000}
-                >
-                  <div className="intro">
-                    <p className="lead">
-                      We do software development & design,
-                      photography/videography, music composition, graphic
-                      design/motion design, & much more. Whatever you need,
-                      we've got it covered; Tell us about your project & find
-                      out how we can help you realize the vision in your head!
-                    </p>
-                    <hr />
-                    <div className="div">
-                      <Link to="/register" className="btn btn-lg btn-info mr-2">
-                        Create an Account
-                      </Link>
-                      <Link to="/login" className="btn btn-lg btn-light">
-                        Login
-                      </Link>
-                    </div>
-                  </div>
-                </Anime>
-              </Anime>
-            </div>
+          <div className="text-center">
+            <img className="logo" src={logo} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="container">
+            <Link to="/about">
+              <div className="column left text-left">
+                <i className="fas fa-angle-double-left" />
+              </div>
+            </Link>
+            <HoverCup />
+            <Link to="/about">
+              <div className="column right text-right">
+                <i className="fas fa-angle-double-right" />
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="intro text-center">
+          <p className="lead">
+            We do software development & design, photography/videography, music
+            composition, graphic design/motion design, & much more. Whatever you
+            need, we&apos;ve got it covered; Tell us about your project & find
+            out how we can help you realize the vision in your head!
+          </p>
+          <hr />
+          <div className="div">
+            <Link to="/register" className="btn btn-lg btn-info mr-2">
+              Create an Account
+            </Link>
+            <Link to="/login" className="btn btn-lg btn-light">
+              Login
+            </Link>
           </div>
         </div>
       </div>
