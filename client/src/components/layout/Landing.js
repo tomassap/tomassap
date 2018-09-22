@@ -1,33 +1,29 @@
 import React, { Component } from "react";
 import Anime from "react-anime";
+import anime from "animejs";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
-import logo from "../../img/tomassaplogo-01.png";
+import { CSSTransition, Transition } from "react-transition-group";
 import HoverCup from "../common/HoverCup";
+import Logo from "../common/Logo";
 
 class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <div className="container">
-          <div className="text-center">
-            <img className="logo" src={logo} />
-          </div>
-        </div>
+        <Transition appear={true} timeout={500}>
+          {status => {
+            return <Logo status={status} />;
+          }}
+        </Transition>
         <div className="row">
           <div className="container">
-            <Link to="/about">
-              <div className="column left text-left">
-                <i className="fas fa-angle-double-left" />
-              </div>
-            </Link>
-            <HoverCup />
-            <Link to="/about">
-              <div className="column right text-right">
-                <i className="fas fa-angle-double-right" />
-              </div>
-            </Link>
+            <Transition appear={true} timeout={500}>
+              {status => {
+                return <HoverCup status={status} />;
+              }}
+            </Transition>
           </div>
         </div>
         <div className="intro text-center">

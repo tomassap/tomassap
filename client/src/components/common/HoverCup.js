@@ -5,12 +5,25 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 class HoverCup extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     // create cup DOM reference
     this.cupRef = React.createRef();
     this.spin = this.spin.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      in: true
+    });
+    const fadeIn = anime({
+      targets: this.cupRef.current,
+      delay: 1000,
+      duration: 3000,
+      scale: [0.5, 1],
+      opacity: 1
+    });
   }
 
   spin() {
@@ -27,7 +40,7 @@ class HoverCup extends Component {
       <Link to="/contact">
         <div className="column middle">
           <div
-            className="coffee"
+            className="coffee circle-base"
             ref={this.cupRef}
             onMouseOver={this.spin.bind(this)}
           />

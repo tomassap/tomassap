@@ -1,10 +1,9 @@
 html {
-  position: relative;
   min-height: 100%;
 }
 
 footer {
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   height: 64px;
@@ -18,13 +17,7 @@ img {
 
 body {
   font-family: "Oswald", sans-serif;
-  margin: 0 0 64px;
   /* bottom margin = footer height */
-  padding-bottom: 25px;
-}
-
-.logo {
-  opacity: 1;
 }
 
 .landing-inner {
@@ -35,21 +28,17 @@ body {
   float: left;
 }
 
-.left,
-.right {
-  width: 25%;
-  font-size: 500%;
-}
-
 .middle {
-  width: 50%;
+  width: 100%;
 }
 
 .coffee {
+  opacity: 0;
   background: url("./img/coffee.png") no-repeat;
   background-position: center;
   height: 64vh;
   margin-top: -100px;
+  border-radius: 50%;
 }
 
 .intro {
@@ -62,7 +51,7 @@ body {
     background: url("./img/coffee-small.png") no-repeat;
     background-position: center;
     height: 64vh;
-    margin-top: -150px;
+    margin-top: -200px;
   }
   .intro {
     margin-top: -100px;
@@ -80,4 +69,33 @@ body {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.logo {
+  padding-bottom: 100px;
+  padding-top: 25px;
+  opacity: 0;
+}
+
+.circle-base {
+  border-radius: 50%;
+}
+
+.logo-enter {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+}
+.logo-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 300ms ease-out;
+}
+.logo-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+.logo-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+  transition: all 300ms ease-out;
 }
