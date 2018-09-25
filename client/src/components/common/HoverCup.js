@@ -22,7 +22,8 @@ class HoverCup extends Component {
       delay: 1000,
       duration: 3000,
       scale: [0.5, 1],
-      opacity: 1
+      opacity: 1,
+      rotate: "3turn"
     });
   }
 
@@ -30,8 +31,7 @@ class HoverCup extends Component {
     const spinCup = anime({
       targets: this.cupRef.current,
       duration: 3000,
-      scale: [0.75, 1],
-      rotate: "3turn"
+      scale: [0.9, 1]
     });
   }
 

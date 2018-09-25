@@ -18,7 +18,7 @@ class Logo extends Component {
       targets: this.logoRef.current,
       delay: 500,
       duration: 3000,
-      scale: [0.5, 1.5],
+      scale: [0.5, 1.2],
       opacity: 1
     });
   }
