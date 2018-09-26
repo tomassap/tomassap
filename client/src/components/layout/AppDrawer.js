@@ -51,11 +51,11 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: "100%",
     zIndex: 1,
     overflow: "hidden",
     position: "relative",
     display: "flex",
+    height: "100%",
     width: "100%",
     minHeight: "100vh"
   },
@@ -74,6 +74,9 @@ const styles = theme => ({
   },
   nested: {
     paddingLeft: theme.spacing.unit * 4
+  },
+  hamburger: {
+    color: "#ffffff"
   }
 });
 
@@ -273,6 +276,7 @@ class AppDrawer extends Component {
           <Toolbar>
             <IconButton
               aria-label="Open drawer"
+              className={classes.hamburger}
               onClick={this.handleDrawerToggle}
             >
               <MenuIcon />

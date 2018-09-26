@@ -12,35 +12,31 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <Transition appear={true} timeout={500}>
-          {status => {
-            return <Logo status={status} />;
-          }}
-        </Transition>
-        <div className="row">
-          <div className="container">
+        <div className="dark-overlay landing-inner text-light">
+          <div className="row">
             <Transition appear={true} timeout={500}>
               {status => {
-                return <HoverCup status={status} />;
+                return <Logo status={status} />;
               }}
             </Transition>
           </div>
-        </div>
-        <div className="intro text-center">
-          <p className="lead">
-            We do software development & design, photography/videography, music
-            composition, graphic design/motion design, & much more. Whatever you
-            need, we&apos;ve got it covered; Tell us about your project & find
-            out how we can help you realize the vision in your head!
-          </p>
-          <hr />
-          <div className="div">
-            <Link to="/register" className="btn btn-lg btn-info mr-2">
-              Create an Account
-            </Link>
-            <Link to="/login" className="btn btn-lg btn-light">
-              Login
-            </Link>
+          <div className="row landing-row">
+            <span className="column left text-center">
+              <i className="fas fa-angle-double-left" />
+            </span>
+            <span className="column middle">
+              <Transition appear={true} timeout={500}>
+                {status => {
+                  return <HoverCup status={status} />;
+                }}
+              </Transition>
+            </span>
+            <span className="column right text-center">
+              <Link to="/contact" className="btn btn-lg btn-info" role="button">
+                Let&apos;s Grab Coffee &nbsp;
+                <i className="fas fa-angle-double-right" />
+              </Link>
+            </span>
           </div>
         </div>
       </div>

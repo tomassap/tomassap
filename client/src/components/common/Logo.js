@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import anime from "animejs";
-import logo from "../../img/tomassaplogo-01.png";
+import logo from "../../img/tomassaplogo_white-01.png";
 
 class Logo extends Component {
   constructor(props) {

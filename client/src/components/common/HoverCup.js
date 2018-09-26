@@ -38,13 +38,11 @@ class HoverCup extends Component {
   render() {
     return (
       <Link to="/contact">
-        <div className="column middle">
-          <div
-            className="coffee circle-base"
-            ref={this.cupRef}
-            onMouseOver={this.spin.bind(this)}
-          />
-        </div>
+        <div
+          className="coffee circle-base"
+          ref={this.cupRef}
+          onMouseOver={this.spin.bind(this)}
+        />
       </Link>
     );
   }
