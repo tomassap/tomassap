@@ -1,37 +1,51 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import Anime from "react-anime";
+import anime from "animejs";
+import { Link, withRouter } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
+import { CSSTransition, Transition } from "react-transition-group";
+import { withStyles } from "@material-ui/core/styles";
+import ButtonBase from "@material-ui/core/ButtonBase";
+import Typography from "@material-ui/core/Typography";
+import HoverCup from "../common/HoverCup";
+import Logo from "../common/Logo";
+import LandingRow from "../common/LandingRow";
 
 class Landing extends Component {
-  componentDidMount() {
-    if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
-    }
-  }
-
   render() {
+    const { classes } = this.props;
     return (
-      <div className="landing">
-        <div className="dark-overlay landing-inner text-light">
-          <div className="container">
+      <div>
+        <div>
+          <div className="land">
             <div className="row">
-              <div className="col-md-12 text-center">
-                <h1 class="display-3 mb-4">Tomassap Services</h1>
-                <p className="lead">
-                  I do software development & design, photography/videogrpahy,
-                  music composition, graphic design, & much more. Whatever you
-                  need, I've got it covered; Tell me about your project & find
-                  out how I can help you realize the vision in your head!
-                </p>
-                <hr />
-                <Link to="/register" className="btn btn-lg btn-info mr-2">
-                  Create an Account
-                </Link>
-                <Link to="/login" className="btn btn-lg btn-light">
-                  Login
-                </Link>
-              </div>
+              <Transition appear={true} timeout={500}>
+                {status => {
+                  return <Logo status={status} />;
+                }}
+              </Transition>
+              <Transition appear={true} timeout={500}>
+                {status => {
+                  return <LandingRow status={status} />;
+                }}
+              </Transition>
+            </div>
+          </div>
+        </div>
+        <div className="landing">
+          <div className="dark-overlay text-light">
+            <div className="row">
+              <Transition appear={true} timeout={500}>
+                {status => {
+                  return <Logo status={status} />;
+                }}
+              </Transition>
+              <Transition appear={true} timeout={500}>
+                {status => {
+                  return <LandingRow status={status} />;
+                }}
+              </Transition>
             </div>
           </div>
         </div>

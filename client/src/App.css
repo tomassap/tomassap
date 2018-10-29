@@ -1,28 +1,100 @@
+html {
+  height: 100%;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 img {
   width: 100%;
 }
 
-.landing {
-  position: relative;
-  background: url("./img/showcase.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin-top: -24px;
-  margin-bottom: -50px;
+body {
+  font-family: "Oswald", sans-serif;
+  /* bottom margin = footer height */
+  height: 100%;
 }
 
-.landing-inner {
-  padding-top: 80px;
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.landing {
+  background-image: url("./img/showcase.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.column {
+  float: left;
+}
+
+.row {
+  width: 100%;
+}
+
+.land {
+  margin-bottom: 10px;
+}
+
+.landing-row {
+  opacity: 0;
+  margin-top: 100px;
+}
+
+.middle {
+  width: 40%;
+}
+
+.left,
+.right {
+  width: 30%;
+}
+
+.coffee {
+  opacity: 0;
+  background: url("./img/coffee.png") no-repeat;
+  background-position: center;
+  height: 64vh;
+  margin-top: -100px;
+}
+
+@media only screen and (max-width: 760px) {
+  .coffee {
+    background: url("./img/coffee-small.png") no-repeat;
+    background-position: center;
+    margin-top: -150px;
+  }
+  .column {
+    width: 100%;
+  }
+  .right {
+    margin-top: -50px;
+  }
+  .left {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .coffee {
+    margin-top: -200px;
+  }
 }
 
 .card-form {
@@ -36,4 +108,13 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.logo {
+  padding-top: 25px;
+  opacity: 0;
+}
+
+.circle-base {
+  border-radius: 50%;
 }
