@@ -75,9 +75,7 @@ const styles = theme => ({
   nested: {
     paddingLeft: theme.spacing.unit * 4
   },
-  hamburger: {
-    color: "#ffffff"
-  }
+  hamburger: {}
 });
 
 class AppDrawer extends Component {
