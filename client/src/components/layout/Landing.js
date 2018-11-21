@@ -9,23 +9,42 @@ import { withStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import BioBlurb from "../common/BioBlurb";
+import LandingAnimation from "../common/LandingAnimation";
 import HoverCup from "../common/HoverCup";
 import Logo from "../common/Logo";
 import Contact from "../layout/Contact";
 import LandingRow from "../common/LandingRow";
 import esp from "../../img/esp.m4v";
+import background from "../../img/skyline.JPG";
+import Waypoint from "react-waypoint";
+
+let landingContent;
+
+if (window.matchMedia("(max-width: 500px)").matches) {
+  /* The viewport is less than, or equal to, 500 pixels wide */
+  landingContent = <LandingAnimation />;
+} else {
+  /* The viewport is greater than 500 pixels wide */
+  landingContent = (
+    <video autoPlay muted loop id="esp">
+      <source src={esp} type="video/mp4" />
+    </video>
+  );
+}
 
 class Landing extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const { classes } = this.props;
     return (
       <div>
         <div>
           <div>
-            <BioBlurb />
-            <video autoPlay muted loop id="esp">
-              <source src={esp} type="video/mp4" />
-            </video>
+            <BioBlurb className="front" />
+            {landingContent}
             <div className="white-background full-width-viewport">
               <Transition appear={true} timeout={500}>
                 {status => {
