@@ -26,7 +26,7 @@ class Landing extends Component {
             <video autoPlay muted loop id="esp">
               <source src={esp} type="video/mp4" />
             </video>
-            <div className="row white-background">
+            <div className="white-background full-width-viewport">
               <Transition appear={true} timeout={500}>
                 {status => {
                   return <Logo status={status} />;

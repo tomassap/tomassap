@@ -11,6 +11,7 @@
     "classnames": "^2.2.6",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.2",
+    "normalize.css": "^8.0.1",
     "react": "^16.4.2",
     "react-anime": "^2.1.0",
     "react-dom": "^16.4.2",

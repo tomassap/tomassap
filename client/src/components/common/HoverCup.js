@@ -11,7 +11,6 @@ class HoverCup extends Component {
 
     // create cup DOM reference
     this.cupRef = React.createRef();
-    this.spin = this.spin.bind(this);
     this.anim = this.anim.bind(this);
     this.animOut = this.animOut.bind(this);
   }
@@ -19,14 +18,6 @@ class HoverCup extends Component {
   componentDidMount() {
     this.setState({
       in: true
-    });
-  }
-
-  spin() {
-    const spinCup = anime({
-      targets: this.cupRef.current,
-      duration: 3000,
-      scale: [0.9, 1]
     });
   }
 
@@ -54,11 +45,7 @@ class HoverCup extends Component {
     return (
       <Link to="/contact">
         <Waypoint onEnter={this.anim} onExit={this.animOut}>
-          <div
-            className="coffee circle-base"
-            ref={this.cupRef}
-            onMouseOver={this.spin.bind(this)}
-          />
+          <div className="coffee circle-base" ref={this.cupRef} />
         </Waypoint>
       </Link>
     );

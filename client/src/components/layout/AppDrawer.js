@@ -60,7 +60,7 @@ const styles = theme => ({
     backgroundColor: "#000000"
   },
   appBar: {
-    position: "absolute"
+    position: "fixed"
   },
   toolbar: {
     backgroundColor: "#696969",
@@ -80,7 +80,13 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 4
   },
   logo: {
-    height: 40
+    height: 40,
+    [theme.breakpoints.down("xs")]: {
+      height: 25
+    }
+  },
+  hamburger: {
+    color: "#ff0000"
   }
 });
 
@@ -281,6 +287,7 @@ class AppDrawer extends Component {
             <IconButton
               aria-label="Open drawer"
               onClick={this.handleDrawerToggle}
+              className={classes.hamburger}
             >
               <MenuIcon />
             </IconButton>
