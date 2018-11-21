@@ -26,7 +26,7 @@ class Logo extends Component {
   render() {
     return (
       <div className="container">
-        <img ref={this.logoRef} className="logo" src={logo} />
+        <img ref={this.logoRef} className="logo full" src={logo} />
       </div>
     );
   }

@@ -9,23 +9,35 @@ footer {
   overflow: hidden;
 }
 
-img {
-  width: 100%;
-}
-
 body {
   font-family: "Oswald", sans-serif;
+  color: white;
   /* bottom margin = footer height */
   height: 100%;
 }
 
+.full {
+  width: 100%;
+}
 .main {
   min-height: 100vh;
   width: 100%;
 }
 
+#esp {
+  width: 100vw;
+  right: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  #esp {
+    margin-top: 200px;
+  }
+}
+
 .landing {
-  background-image: url("./img/showcase.jpg");
+  background-image: url("./img/skyline.JPG");
   height: 100%;
   width: 100%;
   background-position: center;
@@ -38,6 +50,10 @@ body {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.white-background {
+  background-color: #ffffff;
 }
 
 .column {
@@ -91,7 +107,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (max-width: 990px) {
   .coffee {
     margin-top: -200px;
   }
@@ -117,4 +133,38 @@ body {
 
 .circle-base {
   border-radius: 50%;
+}
+
+.ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+  text-align: center;
+  height: 0px;
+  padding-top: 25px;
+  color: #ffffff;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 {
+  top: 0;
+}
+.ml1 .line2 {
+  bottom: 0;
 }

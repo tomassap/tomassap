@@ -73,8 +73,8 @@ class Contact extends Component {
       <div className="contact">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Contact Me</h1>
+            <div className="col-md-6 m-auto">
+              <h1 className="display-4 text-center">Get In Touch!</h1>
               <p className="lead text-center">Tell me about your project!</p>
               <form noValidate onSubmit={this.onSubmit}>
                 <TextFieldGroup
@@ -110,7 +110,10 @@ class Contact extends Component {
                   onChange={this.onChange}
                   error={errors.body}
                 />
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input
+                  type="submit"
+                  className="btn btn-info btn-block mt-4 mb-4"
+                />
               </form>
             </div>
           </div>

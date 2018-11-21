@@ -8,9 +8,12 @@ import { CSSTransition, Transition } from "react-transition-group";
 import { withStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
+import BioBlurb from "../common/BioBlurb";
 import HoverCup from "../common/HoverCup";
 import Logo from "../common/Logo";
+import Contact from "../layout/Contact";
 import LandingRow from "../common/LandingRow";
+import esp from "../../img/esp.m4v";
 
 class Landing extends Component {
   render() {
@@ -18,8 +21,12 @@ class Landing extends Component {
     return (
       <div>
         <div>
-          <div className="land">
-            <div className="row">
+          <div>
+            <BioBlurb />
+            <video autoPlay muted loop id="esp">
+              <source src={esp} type="video/mp4" />
+            </video>
+            <div className="row white-background">
               <Transition appear={true} timeout={500}>
                 {status => {
                   return <Logo status={status} />;
@@ -35,18 +42,7 @@ class Landing extends Component {
         </div>
         <div className="landing">
           <div className="dark-overlay text-light">
-            <div className="row">
-              <Transition appear={true} timeout={500}>
-                {status => {
-                  return <Logo status={status} />;
-                }}
-              </Transition>
-              <Transition appear={true} timeout={500}>
-                {status => {
-                  return <LandingRow status={status} />;
-                }}
-              </Transition>
-            </div>
+            <Contact />
           </div>
         </div>
       </div>

@@ -11,7 +11,9 @@ import {
 } from "../../actions/profileActions";
 import {
   Hidden,
+  Tab,
   AppBar,
+  Button,
   Toolbar,
   IconButton,
   Typography,
@@ -42,9 +44,8 @@ import PersonIcon from "@material-ui/icons/Person";
 import BubbleChartIcon from "@material-ui/icons/BubbleChart";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import EjectIcon from "@material-ui/icons/Eject";
-
 import InfoIcon from "@material-ui/icons/Info";
-import logo from "../../img/tomassaplogo-01.png";
+import logo from "../../img/tomassapAppBar.png";
 
 const drawerWidth = 240;
 
@@ -53,16 +54,19 @@ const styles = theme => ({
     flexGrow: 1,
     zIndex: 1,
     overflow: "hidden",
-    position: "relative",
-    display: "flex",
     height: "100%",
     width: "100%",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    backgroundColor: "#000000"
   },
   appBar: {
     position: "absolute"
   },
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    backgroundColor: "#696969",
+    height: 64,
+    width: "100vw"
+  },
   drawerPaper: {
     width: drawerWidth,
     [theme.breakpoints.up("md")]: {
@@ -75,7 +79,9 @@ const styles = theme => ({
   nested: {
     paddingLeft: theme.spacing.unit * 4
   },
-  hamburger: {}
+  logo: {
+    height: 40
+  }
 });
 
 class AppDrawer extends Component {
@@ -274,11 +280,11 @@ class AppDrawer extends Component {
           <Toolbar>
             <IconButton
               aria-label="Open drawer"
-              className={classes.hamburger}
               onClick={this.handleDrawerToggle}
             >
               <MenuIcon />
             </IconButton>
+            <img className={classes.logo} src={logo} height="64" />
           </Toolbar>
         </AppBar>
         <Drawer
