@@ -27,6 +27,7 @@ import Profile from "./components/profile/Profile";
 import NotFound from "./components/not_found/NotFound";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
+import Music from "./components/services//music/Music";
 
 import "./App.css";
 
@@ -64,6 +65,7 @@ class App extends Component {
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/profiles" component={Profiles} />
                 <Route exact path="/profile/:handle" component={Profile} />
+                <Route exact path="/services/music" component={Music} />
                 <Switch>
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 </Switch>
