@@ -20,8 +20,11 @@ import overthrow from "../../../audio/overthrow.wav";
 const styles = theme => ({
   heading: {
     marginTop: "2%",
+    marginBottom: "2%",
     textAlign: "center",
-    color: "#ff0000"
+    color: "#ff0000",
+    textDecoration: "underline overline",
+    textDecorationColor: "#ffffff"
   },
   blurb: {
     textAlign: "center",

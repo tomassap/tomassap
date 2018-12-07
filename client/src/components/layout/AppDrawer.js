@@ -150,12 +150,20 @@ class AppDrawer extends Component {
         </ListItem>
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <Link to="/development">
+            <Link to="/services/development">
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
                   <CodeIcon />
                 </ListItemIcon>
                 <ListItemText inset primary="Development" />
+              </ListItem>
+            </Link>
+            <Link to="/services/design">
+              <ListItem button className={classes.nested}>
+                <ListItemIcon>
+                  <BrushIcon />
+                </ListItemIcon>
+                <ListItemText inset primary="Design" />
               </ListItem>
             </Link>
             <Link to="/services/photography">
@@ -166,20 +174,12 @@ class AppDrawer extends Component {
                 <ListItemText inset primary="Photography" />
               </ListItem>
             </Link>
-            <Link to="/services/videography">
+            <Link to="/services/cinematography">
               <ListItem button className={classes.nested}>
                 <ListItemIcon>
                   <VideocamIcon />
                 </ListItemIcon>
-                <ListItemText inset primary="Videography" />
-              </ListItem>
-            </Link>
-            <Link to="/services/design">
-              <ListItem button className={classes.nested}>
-                <ListItemIcon>
-                  <BrushIcon />
-                </ListItemIcon>
-                <ListItemText inset primary="Design" />
+                <ListItemText inset primary="Cinematography" />
               </ListItem>
             </Link>
             <Link to="/services/music">

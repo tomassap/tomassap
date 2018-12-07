@@ -63,7 +63,7 @@ export const logoutUser = () => dispatch => {
 // send email
 export const sendEmail = (emailData, history) => dispatch => {
   axios
-    .post("api/emails/send", emailData)
+    .post("/api/emails/send", emailData)
     .then(res => history.push("/thankyou"))
     .catch(err =>
       dispatch({

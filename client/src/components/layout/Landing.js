@@ -14,7 +14,7 @@ import HoverCup from "../common/HoverCup";
 import Logo from "../common/Logo";
 import Contact from "../layout/Contact";
 import LandingRow from "../common/LandingRow";
-import esp from "../../img/esp.m4v";
+import esp from "../../mov/esp.m4v";
 import background from "../../img/skyline.JPG";
 import Waypoint from "react-waypoint";
 

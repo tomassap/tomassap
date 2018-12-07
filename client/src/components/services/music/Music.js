@@ -12,7 +12,11 @@ class Music extends Component {
     return (
       <div>
         <MusicShowcase />
-        <Contact />
+        <div className="landing">
+          <div className="dark-overlay text-light">
+            <Contact />
+          </div>
+        </div>
       </div>
     );
   }
