@@ -17,6 +17,7 @@ import Landing from "./components/layout/Landing";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Contact from "./components/layout/Contact";
+import ThankYou from "./components/common/ThankYou";
 import Dashboard from "./components/dashboard/Dashboard";
 import CreateProfile from "./components/create-profile/CreateProfile";
 import EditProfile from "./components/edit-profile/EditProfile";
@@ -27,7 +28,9 @@ import Profile from "./components/profile/Profile";
 import NotFound from "./components/not_found/NotFound";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
+import About from "./components/about/About";
 import Development from "./components/services/development/Development";
+import Design from "./components/services/design/Design";
 import Photography from "./components/services/photography/Photography";
 import Cinematography from "./components/services/cinematography/Cinematography";
 import Music from "./components/services/music/Music";
@@ -66,13 +69,16 @@ class App extends Component {
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/contact" component={Contact} />
+                <Route exact path="/thankyou" component={ThankYou} />
                 <Route exact path="/profiles" component={Profiles} />
                 <Route exact path="/profile/:handle" component={Profile} />
+                <Route exact path="/about" component={About} />
                 <Route
                   exact
                   path="/services/development"
                   component={Development}
                 />
+                <Route exact path="/services/design" component={Design} />
                 <Route
                   exact
                   path="/services/photography"

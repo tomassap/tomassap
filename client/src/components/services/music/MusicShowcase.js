@@ -29,10 +29,12 @@ const styles = theme => ({
   blurb: {
     textAlign: "center",
     marginRight: "10%",
-    marginLeft: "10%"
+    marginLeft: "10%",
+    marginBottom: "5%"
   },
   mediaList: {
-    display: "grid"
+    display: "grid",
+    marginBottom: "5%"
   },
   media: {
     gridColumn: 1,
@@ -131,13 +133,13 @@ class MusicShowcase extends Component {
     return (
       <div>
         <h1 className={classes.heading}>Music Composition &amp; Production</h1>
-        <p className={classes.blurb}>
+        <h3 className={classes.blurb}>
           I compose &amp; produce music for many different mediums including
           film, TV, advertisements, &amp; more! I compose many different styles
           of music, but I specialize in Hip-Hop, Jazz, &amp; Rock. Here are some
           examples of compositions I've made for clients. If you like what you
           hear, let me know what I can do for your next project!
-        </p>
+        </h3>
         <div className={classes.mediaList}>
           <div className={classes.media}>
             <Card className={classes.card}>

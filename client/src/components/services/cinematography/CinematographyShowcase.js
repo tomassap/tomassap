@@ -29,7 +29,8 @@ const styles = theme => ({
     marginLeft: "10%"
   },
   mediaList: {
-    display: "grid"
+    display: "grid",
+    marginBottom: "5%"
   },
   column1: {
     gridColumn: 1,
@@ -49,12 +50,12 @@ class CinematographyShowcase extends Component {
     return (
       <div>
         <h1 className={classes.heading}>Cinematography</h1>
-        <p className={classes.blurb}>
+        <h3 className={classes.blurb}>
           I do cinematography for films, documentaries, advertisements, events,
           &amp; more. If you need high quality video content for your project,
           your event, or your business, get in touch with the form at the bottom
           of this page!
-        </p>
+        </h3>
         <div className={classes.mediaList}>
           <video controls className={classes.column1} src={mov1} />
           <video controls className={classes.column1} src={mov2} />

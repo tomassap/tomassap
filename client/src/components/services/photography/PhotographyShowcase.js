@@ -31,10 +31,12 @@ const styles = theme => ({
   blurb: {
     textAlign: "center",
     marginRight: "10%",
-    marginLeft: "10%"
+    marginLeft: "10%",
+    marginBottom: "5%"
   },
   mediaList: {
-    display: "grid"
+    display: "grid",
+    marginBottom: "5%"
   },
   column1: {
     gridColumn: 1,
@@ -44,36 +46,6 @@ const styles = theme => ({
   column2: {
     gridColumn: 2,
     width: "50vw"
-  },
-  card: {
-    position: "relative",
-    display: "flex",
-    width: "80vw",
-    left: "10%"
-  },
-  cardInfo: {
-    width: "40vw"
-  },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-    width: "40vw"
-  },
-  content: {
-    flex: "1 0 auto"
-  },
-  cover: {
-    width: "40vw"
-  },
-  controls: {
-    display: "flex",
-    alignItems: "center",
-    paddingLeft: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit
-  },
-  playIcon: {
-    height: 38,
-    width: 38
   }
 });
 
@@ -88,12 +60,12 @@ class PhotographyShowcase extends Component {
     return (
       <div>
         <h1 className={classes.heading}>Photography</h1>
-        <p className={classes.blurb}>
+        <h3 className={classes.blurb}>
           I do many different kinds of photography such as Product Photography,
           Event Photography, Pet Photography, Portrait Photography, Wedding
           Photography, &amp; more. If you need high quality photos for yourself,
           your family, or your business, get in touch with the form below!
-        </p>
+        </h3>
         <div className={classes.mediaList}>
           <img className={(classes.row1, classes.column1)} src={img6} />
           <img className={(classes.row1, classes.column2)} src={img2} />

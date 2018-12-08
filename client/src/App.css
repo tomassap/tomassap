@@ -214,12 +214,6 @@ footer {
   padding-top: 50px;
 }
 
-@media only screen and (min-width: 760px) {
-  .contact {
-    padding-top: 100px;
-  }
-}
-
 .small {
   height: 2px;
 }
@@ -234,4 +228,10 @@ footer {
   background-color: #ff0000;
   margin-bottom: 2px;
   opacity: 0.5;
+}
+
+.thank-you {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
 }
