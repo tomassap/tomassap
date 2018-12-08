@@ -59,9 +59,9 @@ class AboutBlurb extends Component {
           Musician. I created tomassap services as a unified front for all of my
           skills &amp; services. I learn quickly &amp; carefully, work
           dilligently, &amp; deliver timely, valuable results. I am extremely
-          passionate about everything that I do. If you like to talk to me about
-          a project, get in touch with the form below or start a chat with me
-          through the icon in the lower right corner of your screen.
+          passionate about everything that I do. If you'd like to talk to me
+          about a project, get in touch with the form below or start a chat with
+          me through the icon in the lower right corner of your screen.
         </h4>
       </div>
     );
