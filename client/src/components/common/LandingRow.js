@@ -89,28 +89,30 @@ class LandingRow extends Component {
     return (
       <div ref={this.rowRef} className="row landing-row">
         <span className="column left text-center">
-          <ButtonBase
-            focusRipple
-            key="About"
-            className={classes.image}
-            focusVisibleClassName={classes.focusVisible}
-            style={{
-              width: "25%"
-            }}
-          >
-            <span className={classes.imageButton}>
-              <Typography
-                component="span"
-                variant="subheading"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                About &nbsp;
-                <i className="fas fa-angle-double-left" />
-                <span className={classes.imageMarked} />
-              </Typography>
-            </span>
-          </ButtonBase>
+          <Link to="/about">
+            <ButtonBase
+              focusRipple
+              key="About"
+              className={classes.image}
+              focusVisibleClassName={classes.focusVisible}
+              style={{
+                width: "25%"
+              }}
+            >
+              <span className={classes.imageButton}>
+                <Typography
+                  component="span"
+                  variant="subheading"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  About &nbsp;
+                  <i className="fas fa-angle-double-left" />
+                  <span className={classes.imageMarked} />
+                </Typography>
+              </span>
+            </ButtonBase>
+          </Link>
         </span>
         <span className="column middle">
           <Transition appear={true} timeout={500}>
